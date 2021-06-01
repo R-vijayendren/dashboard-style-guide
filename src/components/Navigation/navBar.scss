@@ -1,9 +1,5 @@
 @import '../../baseStyle.scss';
 
-.pd-05 {
-  padding: .5rem;
-}
-
 .navBarWrapper {
   @include flexLayoutWithGap(row, center, flex-start, 1rem);
   @extend .box-shadow;
