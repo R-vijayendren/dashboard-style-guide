@@ -1,0 +1,9 @@
+@import './baseStyle.scss';
+$fontColor: #282c34;
+
+.App {
+  @include flexLayout(column, flex-start, flex-start);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
