@@ -33,4 +33,55 @@
       }
     }
   }
+
+  .option-item {
+    @include flexLayout(row, center, space-between);
+    width: 90%;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(126, 125, 125);
+
+    .option-name {
+      @include flexLayoutWithGap(row, center, flex-start, .5rem);
+    }
+
+    .option-badge {
+      font-size: 8px;
+      padding: 0 .2rem;
+      border-radius: 2px;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: rgb(233, 232, 232);
+      color: #555;
+      cursor: pointer;
+    }
+  }
+
+  .userUiKits {
+    @include flexLayoutWithGap(column, center, flex-start, 1rem);
+    width: 100%;
+
+    .kit-label {
+      width: 90%;
+      text-align: start;
+      font-size: 9px;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .sideBar-user-options {
+      @include flexLayout(column, center, flex-start);
+      border-bottom: 1px solid rgb(238, 238, 238);
+      width: 100%;
+      padding-bottom: 1rem;
+    }
+
+    .sideBar-global-options {
+      @include flexLayout(column, center, flex-start);
+      width: 100%;
+    }
+  }
 }

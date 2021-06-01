@@ -36,11 +36,18 @@ const renderIcon = value => {
 
 export const renderOptions = option => {
   return (
-    <div key={option.key} className='option-item pd-05'>
+    <div key={option.key} className='option-item pd-08'>
       <div className='option-name'>
         {renderIcon(option.key)} {option.label}
       </div>
-      {option.count && <div className='option-badge'>{option.count}</div>}
+      {option.count && (
+        <div
+          style={{ backgroundColor: option.badgeColor }}
+          className='option-badge'
+        >
+          {option.count}
+        </div>
+      )}
     </div>
   );
 };
