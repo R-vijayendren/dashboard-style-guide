@@ -2,7 +2,6 @@
 
 .navBarWrapper {
   @include flexLayoutWithGap(row, center, flex-start, 1rem);
-  @extend .box-shadow;
   width: 100%;
   height: 70px;
   background-color: hsl(224, 98%, 35%);
