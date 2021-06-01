@@ -1,6 +1,8 @@
 import React from 'react';
 import './navBar.scss';
 import { RiMiniProgramLine } from 'react-icons/ri';
+import { VscBellDot, VscMail, VscSearch } from 'react-icons/vsc';
+import { BsGrid3X3Gap } from 'react-icons/bs';
 
 const NavigationBar = () => {
   return (
@@ -13,7 +15,12 @@ const NavigationBar = () => {
       </div>
       <div className='navItemContainer'>
         <div className='pageTitle'>Dashboard</div>
-        <div className='navItems'></div>
+        <div className='navItems'>
+          <VscBellDot size={20} />
+          <VscMail size={20} />
+          <VscSearch size={20} />
+          <BsGrid3X3Gap size={20} />
+        </div>
       </div>
     </div>
   );
