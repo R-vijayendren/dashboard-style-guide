@@ -30,9 +30,16 @@
 
   .navItemContainer {
     @include flexLayout(row, center, space-between);
+    width: calc(100% - 250px);
+    height: 100%;
 
     .pageTitle {
       color: rgb(238, 238, 238);
+    }
+
+    .navItems {
+      @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
+      width: 200px;
     }
   }
 }
