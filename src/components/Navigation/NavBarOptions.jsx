@@ -47,34 +47,28 @@ const NavBarOptions = () => {
         return null;
     }
   };
+
+  const renderOptions = option => {
+    return (
+      <div key={option.key} className='option-item pd-05'>
+        <div className='option-name'>
+          {renderIcon(option.key)} {option.label}
+        </div>
+        {option.count && <div className='option-badge'>{option.count}</div>}
+      </div>
+    );
+  };
+
   return (
     <div className='navOptionsWrapper'>
       <div className='users-options'>
         {USERS_OPTIONS.map(options => {
-          return (
-            <div key={options.key} className='option-item pd-05'>
-              <div className='option-name'>
-                {renderIcon(options.key)} {options.label}
-              </div>
-              {options.count && (
-                <div className='option-badge'>{options.count}</div>
-              )}
-            </div>
-          );
+          return renderOptions(options);
         })}
       </div>
       <div className='global-options'>
         {GLOBAL_OPTIONS.map(options => {
-          return (
-            <div key={options.key} className='option-item pd-05'>
-              <div className='option-name'>
-                {renderIcon(options.key)} {options.label}
-              </div>
-              {options.count && (
-                <div className='option-badge'>{options.count}</div>
-              )}
-            </div>
-          );
+          return renderOptions(options);
         })}
       </div>
     </div>
