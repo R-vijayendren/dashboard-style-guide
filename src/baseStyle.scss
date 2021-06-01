@@ -1,0 +1,25 @@
+.box-shadow {
+  box-shadow: 0 2px 5px #999;
+}
+
+.card-container {
+  border: .5px solid #888;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #000;
+}
+
+@mixin flexLayout($direction, $alignItems, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignItems;
+  justify-content: $justify;
+}
+
+@mixin flexLayoutWithGap($direction, $alignItems, $justify, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignItems;
+  justify-content: $justify;
+  gap: $gap;
+}
