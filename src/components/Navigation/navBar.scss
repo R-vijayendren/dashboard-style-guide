@@ -63,9 +63,21 @@
 }
 
 .option-item {
-  @include flexLayoutWithGap(row, center, flex-start, .5rem);
+  @include flexLayout(row, center, space-between);
   width: 90%;
-  font-size: small;
+  font-size: 10px;
+
+  .option-name {
+    @include flexLayoutWithGap(row, center, flex-start, .5rem);
+  }
+
+  .option-badge {
+    font-size: 8px;
+    padding: 0 .2rem;
+    border-radius: 2px;
+    background-color: rgb(163, 44, 248);
+    color: #fff;
+  }
 
   &:hover {
     background-color: #999;

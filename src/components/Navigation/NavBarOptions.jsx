@@ -11,15 +11,15 @@ import { GoGlobe } from 'react-icons/go';
 import { GiThreeFriends } from 'react-icons/gi';
 
 const USERS_OPTIONS = [
-  { key: 'profile', label: 'My Profile' },
-  { key: 'balance', label: 'Balance' },
-  { key: 'connections', label: 'Connections' },
-  { key: 'friends', label: 'Friends' }
+  { key: 'profile', label: 'My Profile', count: null },
+  { key: 'balance', label: 'Balance', count: null },
+  { key: 'connections', label: 'Connections', count: 29 },
+  { key: 'friends', label: 'Friends', count: null }
 ];
 
 const GLOBAL_OPTIONS = [
-  { key: 'events', label: 'Events' },
-  { key: 'account', label: 'Account Settings' }
+  { key: 'events', label: 'Events', count: 4 },
+  { key: 'account', label: 'Account Settings', count: null }
 ];
 
 const NavBarOptions = () => {
@@ -53,7 +53,12 @@ const NavBarOptions = () => {
         {USERS_OPTIONS.map(options => {
           return (
             <div key={options.key} className='option-item pd-05'>
-              {renderIcon(options.key)} <div>{options.label}</div>
+              <div className='option-name'>
+                {renderIcon(options.key)} {options.label}
+              </div>
+              {options.count && (
+                <div className='option-badge'>{options.count}</div>
+              )}
             </div>
           );
         })}
@@ -62,7 +67,12 @@ const NavBarOptions = () => {
         {GLOBAL_OPTIONS.map(options => {
           return (
             <div key={options.key} className='option-item pd-05'>
-              {renderIcon(options.key)} <div>{options.label}</div>
+              <div className='option-name'>
+                {renderIcon(options.key)} {options.label}
+              </div>
+              {options.count && (
+                <div className='option-badge'>{options.count}</div>
+              )}
             </div>
           );
         })}
