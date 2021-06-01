@@ -50,13 +50,23 @@
   .navOptionsContainer {
     position: absolute;
     top: 75px;
-    right: 30px;
+    right: 60px;
     width: 200px;
     height: 250px;
   }
 }
 
-.option-item {}
+.option-item {
+  @include flexLayoutWithGap(row, center, flex-start, .5rem);
+  width: 90%;
+  font-size: small;
+
+  &:hover {
+    background-color: #999;
+    color: #fff;
+    cursor: pointer;
+  }
+}
 
 .navOptionsWrapper {
   @include flexLayoutWithGap(column, center, center, 1rem);
@@ -71,6 +81,7 @@
   .users-options {
     @include flexLayout(column, center, flex-start);
     width: 100%;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #999;
   }
 
