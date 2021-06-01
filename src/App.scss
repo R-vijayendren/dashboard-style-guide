@@ -7,4 +7,16 @@ $fontColor: #282c34;
   height: 100vh;
   overflow-y: scroll;
   background-color: #e8e8e8;
+
+  .appContainer {
+    @include flexLayoutWithGap(row, center, flex-start, 1rem);
+    height: calc(100% - 70px);
+
+    .appSideBar {
+      @include flexLayoutWithGap(column, center, flex-start, 1rem);
+      width: 248px;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
 }
