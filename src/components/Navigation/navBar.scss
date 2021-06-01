@@ -1,0 +1,30 @@
+@import '../../baseStyle.scss';
+
+.navBarWrapper {
+  @include flexLayout(row, center, flex-start);
+  width: 100%;
+  height: 70px;
+  background-color: hsl(224, 98%, 35%);
+  color: #fff;
+
+  .appLogoContainer {
+    @include flexLayoutWithGap(row, center, center, .5rem);
+    width: 250px;
+    height: 100%;
+    background-color: hsl(224, 92%, 24%);
+
+    .appLogo {
+      @include flexLayout(row, center, flex-end);
+      width: 80px;
+    }
+
+    .appName {
+      @include flexLayout(row, center, flex-start);
+      width: 160px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+
+  .navItemContainer {}
+}
