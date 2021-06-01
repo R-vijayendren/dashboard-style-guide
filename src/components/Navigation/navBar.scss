@@ -44,6 +44,12 @@
     .navItems {
       @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
       width: 200px;
+
+      .nav-icons {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 

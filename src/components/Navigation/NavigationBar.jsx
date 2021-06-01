@@ -18,10 +18,16 @@ const NavigationBar = () => {
       <div className='navItemContainer'>
         <div className='pageTitle'>Dashboard</div>
         <div className='navItems'>
-          <VscBellDot size={20} />
-          <VscMail size={20} />
-          <VscSearch size={20} />
-          <div onClick={() => setIsOpen(!isOpen)}>
+          <div className='nav-icons'>
+            <VscBellDot size={20} />
+          </div>
+          <div className='nav-icons'>
+            <VscMail size={20} />
+          </div>
+          <div className='nav-icons'>
+            <VscSearch size={20} />
+          </div>
+          <div className='nav-icons' onClick={() => setIsOpen(!isOpen)}>
             <BsGrid3X3Gap size={20} />
           </div>
         </div>
