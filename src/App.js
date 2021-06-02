@@ -1,4 +1,5 @@
 import './App.scss';
+import Card from './components/Card/Card';
 import NavigationBar from './components/Navigation/NavigationBar';
 import SideBar from './components/SideBar/SideBar';
 
@@ -10,7 +11,9 @@ function App() {
         <div className='appSideBar'>
           <SideBar />
         </div>
-        <div className='appContent'></div>
+        <div className='appContent'>
+          <Card>Dashboard item</Card>
+        </div>
       </div>
     </div>
   );
