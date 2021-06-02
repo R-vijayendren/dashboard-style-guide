@@ -8,6 +8,42 @@
   .dashboard-welcome-container {
     @include flexLayoutWithGap(row, center, flex-start, 1rem);
     padding: 1rem 0;
+    width: 100%;
+
+    .cardWrapper {
+      width: 45%;
+
+      .card-item-container {
+        @include flexLayoutWithGap(row, center, flex-start, 1rem);
+        width: 100%;
+
+        .card-left-content {
+          @include flexLayoutWithGap(column, flex-start, flex-start, 1rem);
+          width: 80%;
+
+          .card-label {
+            font-size: medium;
+            color: #555;
+
+            em {
+              color: #010a83;
+            }
+          }
+
+          .card-description {
+            font-size: 10px;
+            color: #999;
+          }
+        }
+
+        .card-right-content {
+          @include flexLayout(column, center, center);
+          font-size: larger;
+          font-weight: bold;
+          letter-spacing: .2rem;
+        }
+      }
+    }
 
   }
 }
