@@ -1,7 +1,7 @@
 import './App.scss';
-import Card from './components/Card/Card';
 import NavigationBar from './components/Navigation/NavigationBar';
 import SideBar from './components/SideBar/SideBar';
+import DashboardContent from './pages/Dashboard/DashboardContent';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <SideBar />
         </div>
         <div className='appContent'>
-          <Card>Dashboard item</Card>
+          <DashboardContent />
         </div>
       </div>
     </div>

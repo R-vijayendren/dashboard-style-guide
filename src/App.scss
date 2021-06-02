@@ -21,7 +21,9 @@ $fontColor: #282c34;
     }
 
     .appContent {
-      @include flexLayoutWithGap(column, flex-start, flex-start, 1rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: calc(100% - 260px);
       height: 100%;
     }
