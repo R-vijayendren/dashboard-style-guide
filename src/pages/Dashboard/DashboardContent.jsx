@@ -7,6 +7,7 @@ import { FiPaperclip, FiClipboard } from 'react-icons/fi';
 import { BiLockAlt, BiBlock } from 'react-icons/bi';
 import { RiBarChart2Fill } from 'react-icons/ri';
 import CardWithChart from './CardWithChart';
+import DashboardActivity from './DashboardActivity';
 
 const DashboardContent = () => {
   const renderIcon = value => {
@@ -87,6 +88,7 @@ const DashboardContent = () => {
         )}
       </div>
       <div className='card-activity-container'>
+        <DashboardActivity />
         <CardWithChart />
       </div>
     </div>
