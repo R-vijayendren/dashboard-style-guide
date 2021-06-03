@@ -7,7 +7,7 @@
 
   .dashboard-welcome-container {
     @include flexLayoutWithGap(row, center, flex-start, 1rem);
-    padding: 1rem 0;
+    padding-top: 1rem;
     width: 100%;
 
     .cardWrapper {
