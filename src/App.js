@@ -1,6 +1,7 @@
 import './App.scss';
 import NavigationBar from './components/Navigation/NavigationBar';
 import SideBar from './components/SideBar/SideBar';
+import DashboardContent from './pages/Dashboard/DashboardContent';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <div className='appSideBar'>
           <SideBar />
         </div>
-        <div className='appContent'></div>
+        <div className='appContent'>
+          <DashboardContent />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,7 @@
+@import '../../baseStyle.scss';
+
+.cardWrapper {
+  @include flexLayoutWithGap(column, flex-start, flex-start, 1rem);
+  @extend .box-shadow;
+  @extend .card-container;
+}

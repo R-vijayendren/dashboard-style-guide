@@ -10,13 +10,22 @@ $fontColor: #282c34;
 
   .appContainer {
     @include flexLayoutWithGap(row, center, flex-start, 1rem);
-    height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
+    width: 100%;
 
     .appSideBar {
       @include flexLayoutWithGap(column, center, flex-start, 1rem);
-      width: 248px;
-      height: 100%;
+      width: 250px;
       background-color: #fff;
+      height: 100%
+    }
+
+    .appContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% - 260px);
+      height: 100%;
     }
   }
 }
