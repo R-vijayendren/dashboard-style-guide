@@ -46,4 +46,51 @@
     }
 
   }
+
+  .leaderboard-container {
+    @include flexLayoutWithGap(row, center, flex-start, 1rem);
+    width: 100%;
+    height: 120px;
+
+    .cardWrapper {
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      width: 23.2%;
+      height: 100%;
+      padding: 0;
+      font-size: small;
+
+      .card-name {
+        @include flexLayout(row, center, space-between);
+        width: 86.5%;
+        height: 60%;
+        padding: 0 1rem;
+
+        .card-label {
+          @include flexLayoutWithGap(column, flex-start, center, .5rem);
+          width: 60%;
+
+          .card-count {
+            font-size: medium;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+        }
+
+        .card-icon {
+          color: #d3d3d3
+        }
+      }
+
+      .card-footer {
+        @include flexLayout(row, center, space-between);
+        max-width: 100%;
+        width: 86.5%;
+        height: 30%;
+        padding: 0 1rem;
+        color: #fff;
+        font-size: 10px;
+      }
+    }
+  }
 }
