@@ -7,7 +7,7 @@
 
   .dashboard-welcome-container {
     @include flexLayoutWithGap(row, center, flex-start, 1rem);
-    padding: 1rem 0;
+    padding-top: 1rem;
     width: 100%;
 
     .cardWrapper {
@@ -90,6 +90,45 @@
         padding: 0 1rem;
         color: #fff;
         font-size: 10px;
+      }
+    }
+  }
+
+  .card-activity-container {
+    @include flexLayoutWithGap(row, center, flex-start, 1rem);
+    width: 100%;
+    height: 385px;
+
+    .cardWrapper {
+      width: 50%;
+
+      .card-head__header {
+        width: 100%;
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom: 1rem;
+      }
+
+      .chart-container {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    .card-pie-chart-container {
+      @include flexLayoutWithGap(column, center, flex-start, 1rem);
+      width: 42.5%;
+      height: 100%;
+
+      .cardWrapper {
+        width: 93%;
+
+        .pie-chart-container {
+          @include flexLayoutWithGap(row, center, center, 1rem);
+          width: 100%;
+          height: 100%;
+          font-size: 12px;
+        }
       }
     }
   }
