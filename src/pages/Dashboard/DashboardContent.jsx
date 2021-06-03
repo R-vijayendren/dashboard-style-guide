@@ -33,7 +33,12 @@ const DashboardContent = () => {
       <Card key={leaderBoard.key}>
         <div className='card-name'>
           <div className='card-label'>
-            <div className='card-count'>{leaderBoard.count}</div>
+            <div
+              style={{ color: leaderBoard.statColor }}
+              className='card-count'
+            >
+              {leaderBoard.count}
+            </div>
             <div className='card-label__name'>{leaderBoard.label}</div>
           </div>
           <div className='card-icon'>{renderIcon(leaderBoard.key)}</div>
