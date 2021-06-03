@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cell, Legend, Pie, PieChart } from 'recharts';
+import { Cell, Pie, PieChart } from 'recharts';
 import Card from '../../components/Card/Card';
 
 const data = [
