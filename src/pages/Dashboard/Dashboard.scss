@@ -93,4 +93,25 @@
       }
     }
   }
+
+  .card-activity-container {
+    @include flexLayoutWithGap(row, center, flex-start, 1rem);
+    width: 100%;
+    height: 100%;
+
+    .cardWrapper {
+      width: 50%;
+
+      .card-head__header {
+        width: 100%;
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom: 1rem;
+      }
+
+      .chart-container {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
