@@ -4,7 +4,7 @@ $fontColor: #282c34;
 .App {
   @include flexLayout(column, flex-start, flex-start);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: scroll;
   background-color: #e8e8e8;
 
@@ -17,7 +17,7 @@ $fontColor: #282c34;
       @include flexLayoutWithGap(column, center, flex-start, 1rem);
       width: 250px;
       background-color: #fff;
-      height: 100%
+      height: 1200px;
     }
 
     .appContent {
@@ -25,7 +25,7 @@ $fontColor: #282c34;
       align-items: center;
       justify-content: center;
       width: calc(100% - 260px);
-      height: 100%;
+      height: 1200px;
     }
   }
 }
