@@ -9,6 +9,8 @@ import { RiBarChart2Fill } from 'react-icons/ri';
 import CardWithChart from './CardWithChart';
 import DashboardActivity from './DashboardActivity';
 
+import Table from '../../components/Table/Table';
+
 const DashboardContent = () => {
   const renderIcon = value => {
     switch (value) {
@@ -90,6 +92,15 @@ const DashboardContent = () => {
       <div className='card-activity-container'>
         <DashboardActivity />
         <CardWithChart />
+      </div>
+      <div className='tableContainer'>
+        <div className='table-card'>
+          <Card>
+            <div className='card-head__header'>ACTIVE LEADS</div>
+            <Table />
+          </Card>
+        </div>
+        <div className='select-card'></div>
       </div>
     </div>
   );
