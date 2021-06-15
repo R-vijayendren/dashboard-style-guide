@@ -72,6 +72,7 @@ const columns = [
 const data = [
   {
     type: 'Buyer',
+    id: 1,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -80,6 +81,7 @@ const data = [
   },
   {
     type: 'Buyer',
+    id: 2,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -88,6 +90,7 @@ const data = [
   },
   {
     type: 'Land Lord',
+    id: 3,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -96,6 +99,7 @@ const data = [
   },
   {
     type: 'Buyer',
+    id: 4,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -104,6 +108,7 @@ const data = [
   },
   {
     type: 'Seller',
+    id: 5,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -112,6 +117,7 @@ const data = [
   },
   {
     type: 'Buyer',
+    id: 6,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -120,6 +126,7 @@ const data = [
   },
   {
     type: 'Buyer',
+    id: 7,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -128,6 +135,7 @@ const data = [
   },
   {
     type: 'Buyer',
+    id: 8,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -136,6 +144,7 @@ const data = [
   },
   {
     type: 'Land Lord',
+    id: 9,
     leadName: 'Diese Ann',
     views: 153,
     favorites: 0,
@@ -145,7 +154,7 @@ const data = [
 ];
 
 const TableWithCustom = () => {
-  return <Table cl columns={columns} data={data} />;
+  return <Table k columns={columns} data={data} rowKey={({ id }) => id} />;
 };
 
 export default TableWithCustom;
