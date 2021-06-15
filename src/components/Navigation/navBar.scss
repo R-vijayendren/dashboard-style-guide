@@ -29,7 +29,7 @@
 
   .navItemContainer {
     @include flexLayout(row, center, space-between);
-    width: calc(100% - 250px);
+    width: calc(100% - 260px);
     height: 100%;
 
     .pageTitle {

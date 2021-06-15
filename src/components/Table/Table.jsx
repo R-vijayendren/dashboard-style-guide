@@ -154,7 +154,11 @@ const data = [
 ];
 
 const TableWithCustom = () => {
-  return <Table k columns={columns} data={data} rowKey={({ id }) => id} />;
+  return (
+    <div style={{ height: '280px', overflow: 'scroll' }}>
+      <Table columns={columns} data={data} rowKey={({ id }) => id} />
+    </div>
+  );
 };
 
 export default TableWithCustom;
