@@ -16,9 +16,9 @@
       height: 300px;
 
       .sales-graph {
+        @include flexLayout(column, flex-start, center);
         width: 62%;
         height: 290px;
-        border: 1px solid #d3d3d3
       }
 
       .sales-content {
