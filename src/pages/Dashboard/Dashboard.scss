@@ -276,7 +276,7 @@
           }
 
           .todo-status-container {
-            @include flexLayoutWithGap(row, center, space-evenly, 1rem);
+            @include flexLayout(row, center, space-between);
             height: 40px;
             width: 100%;
 
@@ -286,10 +286,38 @@
               border: 1px solid #d3d3d3;
               border-radius: 3px;
               background-color: #fff;
+              cursor: pointer;
 
               &:hover {
                 background-color: #3870ff;
                 color: #fff;
+                border: none
+              }
+            }
+
+            .status-buttons {
+              @include flexLayoutWithGap(row, center, center, 1rem);
+              width: 40%;
+
+              .all-status {
+                background-color: #199608;
+                color: #fff;
+                border: none;
+              }
+
+              button {
+                height: 30px;
+                min-width: 40px;
+                border: 1px solid #d3d3d3;
+                border-radius: 3px;
+                background-color: #fff;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: #3870ff;
+                  color: #fff;
+                  border: none;
+                }
               }
             }
           }
