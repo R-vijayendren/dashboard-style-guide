@@ -11,6 +11,7 @@ import DashboardActivity from './DashboardActivity';
 
 import Table from '../../components/Table/Table';
 import DashboardToDoList from './DashboardToDoList';
+import SalesGraph from './SalesGraph';
 
 const DashboardContent = () => {
   const renderIcon = value => {
@@ -107,6 +108,9 @@ const DashboardContent = () => {
             <DashboardToDoList />
           </Card>
         </div>
+      </div>
+      <div className='sales-container'>
+        <SalesGraph />
       </div>
     </div>
   );

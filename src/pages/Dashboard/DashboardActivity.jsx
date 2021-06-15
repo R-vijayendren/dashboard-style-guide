@@ -16,13 +16,13 @@ const DashboardActivity = () => {
       <Card>
         <div className='card-head__header'>ACTIVITIES</div>
         <div className='pie-chart-container'>
-          <PieChart width={100} height={100}>
+          <PieChart width={80} height={80}>
             <Pie
               data={data}
               cx='50%'
               cy='50%'
               labelLine={false}
-              outerRadius={50}
+              outerRadius={40}
               fill='#8884d8'
               dataKey='value'
             >

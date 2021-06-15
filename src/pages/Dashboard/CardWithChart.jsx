@@ -9,7 +9,7 @@ const CardWithChart = () => {
     <Card className='card-chart-container'>
       <div className='card-head__header'>ANALYTICS</div>
       <div className='chart-container'>
-        <BarChart width={500} height={300} data={CUSTOMER_USER_DATA}>
+        <BarChart width={420} height={300} data={CUSTOMER_USER_DATA}>
           <XAxis dataKey='name' tickMargin={20} axisLine={false} tickSize={0} />
           <YAxis
             tickMargin={20}
