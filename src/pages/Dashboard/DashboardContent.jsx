@@ -91,9 +91,8 @@ const DashboardContent = () => {
           renderLeaderBoard(leaderboardItem)
         )}
       </div>
-      <div className='card-activity-container'>
-        <DashboardActivity />
-        <CardWithChart />
+      <div className='sales-container'>
+        <SalesGraph />
       </div>
       <div className='tableContainer'>
         <div className='table-card'>
@@ -109,8 +108,9 @@ const DashboardContent = () => {
           </Card>
         </div>
       </div>
-      <div className='sales-container'>
-        <SalesGraph />
+      <div className='card-activity-container'>
+        <DashboardActivity />
+        <CardWithChart />
       </div>
     </div>
   );

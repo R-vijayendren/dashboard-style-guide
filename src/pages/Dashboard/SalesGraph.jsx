@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { LineChart, Line, XAxis, YAxis } from 'recharts';
 
 import './Dashboard.scss';
 
