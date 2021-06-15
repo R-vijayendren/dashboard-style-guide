@@ -10,6 +10,7 @@ import CardWithChart from './CardWithChart';
 import DashboardActivity from './DashboardActivity';
 
 import Table from '../../components/Table/Table';
+import DashboardToDoList from './DashboardToDoList';
 
 const DashboardContent = () => {
   const renderIcon = value => {
@@ -100,7 +101,12 @@ const DashboardContent = () => {
             <Table />
           </Card>
         </div>
-        <div className='select-card'></div>
+        <div className='select-card'>
+          <Card>
+            <div className='card-head__header'>TO-DO LIST</div>
+            <DashboardToDoList />
+          </Card>
+        </div>
       </div>
     </div>
   );

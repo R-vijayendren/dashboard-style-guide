@@ -87,3 +87,26 @@ export const CUSTOMER_USER_DATA = [
     users: 832
   }
 ];
+
+export const DASHBOARD_TODO_LIST_DATA = [
+  {
+    id: 1,
+    todo: 'Collaboratively administrate',
+    selected: false
+  },
+  {
+    id: 2,
+    todo: 'Another todo on the list, add many',
+    selected: true
+  },
+  {
+    id: 3,
+    todo: 'Dramatically maintain clicks-and-morter',
+    selected: false
+  },
+  {
+    id: 4,
+    todo: 'Administrate empowered markets.',
+    selected: false
+  }
+];
