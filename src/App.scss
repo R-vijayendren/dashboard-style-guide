@@ -9,12 +9,12 @@ $fontColor: #282c34;
   background-color: #e8e8e8;
 
   .appContainer {
-    @include flexLayoutWithGap(row, center, flex-start, 1rem);
+    @include flexLayoutWithGap(row, center, flex-start, 1.3rem);
     height: calc(100% - 70px);
     width: 100%;
 
     .appSideBar {
-      @include flexLayoutWithGap(column, center, flex-start, 1rem);
+      @include flexLayoutWithGap(column, center, flex-start, 1.5rem);
       width: 250px;
       background-color: #fff;
       height: 100%;
@@ -22,7 +22,7 @@ $fontColor: #282c34;
 
     .appContent {
       @include flexLayout(column, center, center);
-      width: calc(100% - 260px);
+      width: calc(100% - 270px);
       height: 100%;
     }
   }
