@@ -4,7 +4,7 @@
   @include flexLayoutWithGap(column, flex-start, flex-start, 1rem);
   width: 100%;
   height: 100%;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 
   .sales-container {
     width: 100%;
@@ -14,7 +14,8 @@
       @include flexLayoutWithGap(row, center, flex-start, 1rem);
       width: 94.5%;
       height: 300px;
-      padding: 0 1rem;
+      padding: 0;
+      padding-left: 2rem;
 
       .sales-graph {
         @include flexLayout(column, flex-start, center);
@@ -29,16 +30,15 @@
 
         .sales-header {
           @include flexLayout(column, flex-start, flex-end);
-          height: 60px;
+          height: 70px;
           width: 100%;
           font-size: x-large;
-          font-weight: bold;
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           color: #434ffc;
         }
 
         .sales-description {
-          height: 200px;
+          height: 190px;
           color: #888;
           line-height: 2rem;
           font-size: small
@@ -100,8 +100,8 @@
     .cardWrapper {
       align-items: center;
       justify-content: center;
-      gap: .7rem;
-      width: 23.2%;
+      gap: .75rem;
+      width: 23.25%;
       height: 100%;
       padding: 0;
       font-size: small;
@@ -145,7 +145,7 @@
     height: 385px;
 
     .cardWrapper {
-      width: 43%;
+      width: 53%;
       height: 91%;
 
       .card-head__header {
@@ -163,7 +163,7 @@
 
     .card-pie-chart-container {
       @include flexLayoutWithGap(column-reverse, center, flex-start, 1rem);
-      width: 50%;
+      width: 40%;
       height: 100%;
 
       .cardWrapper {
@@ -213,20 +213,20 @@
             height: 100px;
 
             .red-line__info {
-              @include flexLayoutWithGap(column, flex-start, flex-start, .1rem);
-              height: 32.5px;
+              @include flexLayoutWithGap(column, flex-start, center, .3rem);
+              height: 34.5px;
               margin-bottom: 1px;
             }
 
             .green-line__info {
-              @include flexLayoutWithGap(column, flex-start, flex-start, .1rem);
-              height: 32.5px;
+              @include flexLayoutWithGap(column, flex-start, center, .3rem);
+              height: 34.5px;
               margin-bottom: 1px;
             }
 
             .blue-line__info {
-              @include flexLayoutWithGap(column, flex-start, flex-start, .1rem);
-              height: 32.5px;
+              @include flexLayoutWithGap(column, flex-start, center, .3rem);
+              height: 34.5px;
               margin-bottom: 1px;
             }
           }
@@ -280,17 +280,36 @@
           .todo-list {
             @include flexLayoutWithGap(column, flex-start, center, .5rem);
 
+            .todo-active {
+              text-decoration: line-through;
+              color: #d3d3d3;
+            }
+
             .todo-row {
               @include flexLayoutWithGap(row, center, flex-start, 1rem);
+              position: relative;
 
-              .todo-inactive-checkbox {
+              // https://stackoverflow.com/a/30708544
+              // referred on this comment for the styling of checkbox.
+              input[type="checkbox"] {
                 height: 1rem;
                 width: 1rem;
+                cursor: pointer;
+                appearance: initial;
+                border: .1rem solid #d3d3d3;
               }
 
-              .todo-active-checkbox {
-                height: 1rem;
-                width: 1rem;
+              input[type="checkbox"]:checked {
+                background-color: #199608;
+                border: none;
+              }
+
+              input[type="checkbox"]:checked:after {
+                color: #fff;
+                content: "\2713";
+                position: absolute;
+                left: .45rem;
+                top: .2rem;
               }
             }
           }
@@ -306,6 +325,7 @@
               width: 75%;
               height: 40px;
               border: none;
+              font-size: 11px;
 
               &:focus {
                 outline: none;
@@ -313,12 +333,18 @@
             }
 
             .add-btn {
-              width: 20%;
+              @extend .box-shadow;
+              width: 15%;
               height: 30px;
               background-color: #3870ff;
               color: #fff;
               border: none;
-              border-radius: 3px;
+              font-size: 11px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #0e52ff
+              }
             }
           }
 
@@ -330,10 +356,10 @@
             button {
               height: 30px;
               min-width: 40px;
-              border: 1px solid #d3d3d3;
-              border-radius: 3px;
+              border: .5px solid #edecec;
               background-color: #fff;
               cursor: pointer;
+              font-size: 11px;
 
               &:hover {
                 background-color: #3870ff;
@@ -355,8 +381,7 @@
               button {
                 height: 30px;
                 min-width: 40px;
-                border: 1px solid #d3d3d3;
-                border-radius: 3px;
+                border: .5px solid #edecec;
                 background-color: #fff;
                 cursor: pointer;
 
