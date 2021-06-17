@@ -340,6 +340,11 @@
               color: #fff;
               border: none;
               font-size: 11px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #0e52ff
+              }
             }
           }
 
