@@ -14,7 +14,8 @@
       @include flexLayoutWithGap(row, center, flex-start, 1rem);
       width: 94.5%;
       height: 300px;
-      padding: 0 1rem;
+      padding: 0;
+      padding-left: 2rem;
 
       .sales-graph {
         @include flexLayout(column, flex-start, center);
@@ -99,8 +100,8 @@
     .cardWrapper {
       align-items: center;
       justify-content: center;
-      gap: .7rem;
-      width: 23.2%;
+      gap: .75rem;
+      width: 23.25%;
       height: 100%;
       padding: 0;
       font-size: small;

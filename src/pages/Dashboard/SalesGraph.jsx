@@ -13,9 +13,10 @@ const SalesGraph = () => {
       <div className='sales-content'>
         <div className='sales-header'>Sales in 2020</div>
         <div className='sales-description'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-          minus fugit provident cupiditate voluptas similique exercitationem
-          expedita maxime vel aut.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae
+          itaque cupiditate optio, voluptas doloremque ad, hic vel veniam eum
+          magni praesentium atque architecto unde mollitia porro modi, corporis
+          ex!
         </div>
       </div>
       <div className='sales-graph'>
@@ -26,7 +27,7 @@ const SalesGraph = () => {
               <stop offset='25%' stopColor='orange' />
               <stop offset='50%' stopColor='blue' />
               <stop offset='75%' stopColor='green' />
-              <stop offset='100%' stopColor='lightseagreen' />
+              <stop offset='100%' stopColor='violet' />
             </linearGradient>
           </defs>
           <CartesianGrid

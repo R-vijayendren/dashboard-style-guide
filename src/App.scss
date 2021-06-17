@@ -4,7 +4,7 @@ $fontColor: #282c34;
 .App {
   @include flexLayout(column, flex-start, flex-start);
   width: 100vw;
-  height: 1400px;
+  height: 1500px;
   overflow-y: scroll;
   background-color: #e8e8e8;
 
