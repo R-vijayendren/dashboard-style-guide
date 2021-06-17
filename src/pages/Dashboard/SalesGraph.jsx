@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
 
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 import './Dashboard.scss';
 
@@ -23,18 +23,25 @@ const SalesGraph = () => {
           <defs>
             <linearGradient id='gradient' x1='0' y1='0' x2='100%' y2='0'>
               <stop offset='0%' stopColor='red' />
-              <stop offset='25%' stopColor='#387b30' />
-              <stop offset='50%' stopColor='#2afc9e' />
-              <stop offset='75%' stopColor='#1b23fh' />
-              <stop offset='100%' stopColor='blue' />
+              <stop offset='25%' stopColor='orange' />
+              <stop offset='50%' stopColor='blue' />
+              <stop offset='75%' stopColor='green' />
+              <stop offset='100%' stopColor='lightseagreen' />
             </linearGradient>
           </defs>
+          <CartesianGrid
+            strokeOpacity={0.5}
+            horizontal={false}
+            verticalPoints={[65, 146, 211, 276, 341, 406, 471, 554]}
+            fill='#999'
+            fillOpacity='0.08'
+          />
           <XAxis
             dataKey='name'
             tickMargin={20}
             tickSize={0}
             padding={{ left: -10 }}
-            tick={{ fill: '#888' }}
+            tick={{ fill: '#888', fontSize: '11px' }}
             stroke='#d3d3d3'
           />
           <YAxis tickSize={0} tick={0} stroke='#d3d3d3' />

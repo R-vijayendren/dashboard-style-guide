@@ -29,16 +29,15 @@
 
         .sales-header {
           @include flexLayout(column, flex-start, flex-end);
-          height: 60px;
+          height: 70px;
           width: 100%;
           font-size: x-large;
-          font-weight: bold;
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           color: #434ffc;
         }
 
         .sales-description {
-          height: 200px;
+          height: 190px;
           color: #888;
           line-height: 2rem;
           font-size: small
