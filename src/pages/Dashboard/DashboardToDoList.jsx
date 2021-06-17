@@ -65,7 +65,7 @@ const DashboardToDoList = () => {
           <button className='active-status'>Active</button>
         </div>
         <button className='todo-completed'>
-          Clear Completed({selectedTodosLength})
+          Clear Completed ({selectedTodosLength})
         </button>
       </div>
     </div>

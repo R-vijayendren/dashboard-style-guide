@@ -325,6 +325,7 @@
               width: 75%;
               height: 40px;
               border: none;
+              font-size: 11px;
 
               &:focus {
                 outline: none;
@@ -332,12 +333,13 @@
             }
 
             .add-btn {
-              width: 20%;
+              @extend .box-shadow;
+              width: 15%;
               height: 30px;
               background-color: #3870ff;
               color: #fff;
               border: none;
-              border-radius: 3px;
+              font-size: 11px;
             }
           }
 
@@ -349,10 +351,10 @@
             button {
               height: 30px;
               min-width: 40px;
-              border: 1px solid #d3d3d3;
-              border-radius: 3px;
+              border: .5px solid #edecec;
               background-color: #fff;
               cursor: pointer;
+              font-size: 11px;
 
               &:hover {
                 background-color: #3870ff;
@@ -374,8 +376,7 @@
               button {
                 height: 30px;
                 min-width: 40px;
-                border: 1px solid #d3d3d3;
-                border-radius: 3px;
+                border: .5px solid #edecec;
                 background-color: #fff;
                 cursor: pointer;
 
