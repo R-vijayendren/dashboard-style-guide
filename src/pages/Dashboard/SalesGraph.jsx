@@ -33,9 +33,9 @@ const SalesGraph = () => {
           <CartesianGrid
             strokeOpacity={0.5}
             horizontal={false}
-            verticalPoints={[65, 146, 211, 276, 341, 406, 471, 554]}
+            verticalPoints={[65, 117, 180, 242, 304, 368, 431, 494, 554]}
             fill='#999'
-            fillOpacity='0.08'
+            fillOpacity='0.07'
           />
           <XAxis
             dataKey='name'
@@ -50,7 +50,7 @@ const SalesGraph = () => {
             type='monotone'
             dataKey='customers'
             stroke='url(#gradient)'
-            strokeWidth={5}
+            strokeWidth={6}
             dot={false}
             strokeLinecap='round'
           />
