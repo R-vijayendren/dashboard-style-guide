@@ -26,7 +26,12 @@ const DashboardToDoList = () => {
     <div className='todo-wrapper'>
       <div className='todo-list'>
         {todoList.map(todoItem => (
-          <div key={todoItem.id} className='todo-row'>
+          <div
+            key={todoItem.id}
+            className={`todo-row ${
+              todoItem.selected ? 'todo-active' : 'todo-inactive'
+            }`}
+          >
             <input
               type='checkbox'
               name={`todo-${todoItem.id}`}
