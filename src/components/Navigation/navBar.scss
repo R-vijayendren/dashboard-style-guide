@@ -103,3 +103,18 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .navBarWrapper {
+    width: 100%;
+
+    .appLogoContainer {
+      width: 45%
+    }
+
+    .navItemContainer {
+      width: 50%;
+
+    }
+  }
+}

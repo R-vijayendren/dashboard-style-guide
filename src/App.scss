@@ -27,3 +27,21 @@ $fontColor: #282c34;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .App {
+    .appContainer {
+      @include flexLayoutWithGap(column, center, flex-start, 1.3rem);
+
+      .appSideBar {
+        display: none;
+      }
+
+      .appContent {
+        @include flexLayout(column, center, center);
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
