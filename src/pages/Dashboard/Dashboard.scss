@@ -138,271 +138,63 @@
       }
     }
   }
-
-  .card-activity-container {
-    @include flexLayoutWithGap(row, center, flex-start, 1rem);
-    width: 100%;
-    height: 385px;
-
-    .cardWrapper {
-      width: 53%;
-      height: 91%;
-
-      .card-head__header {
-        width: 100%;
-        height: 40px;
-        border-bottom: 1px solid #d3d3d3;
-      }
-
-      .chart-container {
-        width: 100%;
-        height: calc(100% - 40px);
-      }
-
-    }
-
-    .card-pie-chart-container {
-      @include flexLayoutWithGap(column-reverse, center, flex-start, 1rem);
-      width: 40%;
-      height: 100%;
-
-      .cardWrapper {
-        width: 93%;
-        height: 39.5%;
-
-        .pie-chart-container {
-          @include flexLayoutWithGap(row, center, center, 1rem);
-          width: 100%;
-          height: 100%;
-          font-size: 12px;
-        }
-
-        .timeline-chart-container {
-          @include flexLayoutWithGap(row, center, flex-start, 1rem);
-          width: 100%;
-          height: 100%;
-          font-size: 10px;
-
-          .time-line {
-            height: 100px;
-            padding: 5px 0;
-
-            .red-line {
-              border: 1px solid #f01d0d;
-              width: 0;
-              height: 32.5px;
-              margin-bottom: 1px;
-            }
-
-            .green-line {
-              border: 1px solid #199608;
-              width: 0;
-              height: 32.5px;
-              margin-bottom: 1px;
-            }
-
-            .blue-line {
-              border: 1px solid #02149b;
-              width: 0;
-              height: 32.5px;
-              margin-bottom: 1px;
-            }
-          }
-
-          .time-line__info {
-            height: 100px;
-
-            .red-line__info {
-              @include flexLayoutWithGap(column, flex-start, center, .3rem);
-              height: 34.5px;
-              margin-bottom: 1px;
-            }
-
-            .green-line__info {
-              @include flexLayoutWithGap(column, flex-start, center, .3rem);
-              height: 34.5px;
-              margin-bottom: 1px;
-            }
-
-            .blue-line__info {
-              @include flexLayoutWithGap(column, flex-start, center, .3rem);
-              height: 34.5px;
-              margin-bottom: 1px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .tableContainer {
-    @include flexLayoutWithGap(row, center, flex-start, 1rem);
-    width: 100%;
-    height: 330px;
-
-    .table-card {
-      width: 60%;
-      height: 100%;
-
-      .cardWrapper {
-        height: 300px;
-        font-size: 10px;
-
-        .card-head__header {
-          width: 100%;
-          border-bottom: 1px solid #d3d3d3;
-          padding-bottom: 1rem;
-          font-size: medium;
-        }
-      }
-    }
-
-    .select-card {
-      width: 36%;
-      height: 100%;
-
-      .cardWrapper {
-        height: 300px;
-        font-size: 10px;
-
-        .card-head__header {
-          width: 100%;
-          border-bottom: 1px solid #d3d3d3;
-          padding-bottom: 1rem;
-          font-size: medium;
-        }
-
-        .todo-wrapper {
-          @include flexLayout(column, flex-start, space-between);
-          height: 90%;
-          width: 100%;
-
-          .todo-list {
-            @include flexLayoutWithGap(column, flex-start, center, .5rem);
-
-            .todo-active {
-              text-decoration: line-through;
-              color: #d3d3d3;
-            }
-
-            .todo-row {
-              @include flexLayoutWithGap(row, center, flex-start, 1rem);
-              position: relative;
-
-              // https://stackoverflow.com/a/30708544
-              // referred on this comment for the styling of checkbox.
-              input[type="checkbox"] {
-                height: 1rem;
-                width: 1rem;
-                cursor: pointer;
-                appearance: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                border: .1rem solid #d3d3d3;
-              }
-
-              input[type="checkbox"]:checked {
-                background-color: #199608;
-                border: none;
-              }
-
-              input[type="checkbox"]:checked:after {
-                color: #fff;
-                content: "\2713";
-                position: absolute;
-                left: .45rem;
-                top: .2rem;
-              }
-            }
-          }
-
-          .todo-new {
-            @include flexLayoutWithGap(row, center, flex-start, 1rem);
-            width: 100%;
-            height: 45px;
-            padding-bottom: .5rem;
-            border-bottom: 1px solid #d3d3d3;
-
-            .new-todo-input {
-              width: 75%;
-              height: 40px;
-              border: none;
-              font-size: 11px;
-
-              &:focus {
-                outline: none;
-              }
-            }
-
-            .add-btn {
-              @extend .box-shadow;
-              width: 15%;
-              height: 30px;
-              background-color: #3870ff;
-              color: #fff;
-              border: none;
-              font-size: 11px;
-              cursor: pointer;
-
-              &:hover {
-                background-color: #0e52ff
-              }
-            }
-          }
-
-          .todo-status-container {
-            @include flexLayout(row, center, space-between);
-            height: 40px;
-            width: 100%;
-
-            button {
-              height: 30px;
-              min-width: 40px;
-              border: .5px solid #edecec;
-              background-color: #fff;
-              cursor: pointer;
-              font-size: 11px;
-
-              &:hover {
-                background-color: #3870ff;
-                color: #fff;
-                border: none
-              }
-            }
-
-            .status-buttons {
-              @include flexLayoutWithGap(row, center, center, 1rem);
-              width: 40%;
-
-              .all-status {
-                background-color: #199608;
-                color: #fff;
-                border: none;
-              }
-
-              button {
-                height: 30px;
-                min-width: 40px;
-                border: .5px solid #edecec;
-                background-color: #fff;
-                cursor: pointer;
-
-                &:hover {
-                  background-color: #3870ff;
-                  color: #fff;
-                  border: none;
-                }
-              }
-            }
-          }
-        }
-      }
-
-    }
-  }
 }
 
-.time_ago {
-  font-size: 10px;
-  color: #999;
+@media (max-width: 768px) {
+  .dashboard-content-wrapper {
+    .dashboard-welcome-container {
+      @include flexLayoutWithGap(column, center, flex-start, 1rem);
+      min-height: 180px;
+
+      .cardWrapper {
+        width: 90%;
+      }
+    }
+
+    .leaderboard-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 280px;
+      justify-items: center;
+
+      .cardWrapper {
+        width: 90%;
+
+        .card-footer {
+          @include flexLayout(row, center, space-between);
+          max-width: 100%;
+          width: 82%;
+          height: 30.5%;
+          padding: 0 1rem;
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .sales-container {
+      display: flex;
+      justify-content: center;
+      height: 500px;
+
+      .cardWrapper {
+        @include flexLayoutWithGap(column, center, flex-start, 1rem);
+        width: 92%;
+        height: 500px;
+        padding: 0 0.5rem;
+
+        .sales-content {
+          width: 100%;
+
+          .sales-description {
+            height: 120px;
+          }
+        }
+
+        .sales-graph {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Dashboard.scss';
+import './TableContainer.scss';
 
-import { DASHBOARD_TODO_LIST_DATA } from './constants';
+import { DASHBOARD_TODO_LIST_DATA } from '../Dashboard/constants';
 
 const DashboardToDoList = () => {
   const [todoList, setTodoList] = useState(DASHBOARD_TODO_LIST_DATA);

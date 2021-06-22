@@ -40,6 +40,11 @@
       @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
       width: 200px;
 
+      .options {
+        @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
+        width: 120px;
+      }
+
       .nav-icons {
         &:hover {
           cursor: pointer;
@@ -101,5 +106,27 @@
   .global-options {
     @include flexLayout(column, center, flex-start);
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navBarWrapper {
+    width: 100%;
+
+    .appLogoContainer {
+      width: 45%
+    }
+
+    .navItemContainer {
+      width: 50%;
+
+      .navItems {
+        justify-content: center;
+      }
+    }
+
+    .navOptionsContainer {
+      right: 10px
+    }
   }
 }
