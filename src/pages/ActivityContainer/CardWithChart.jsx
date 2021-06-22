@@ -1,15 +1,21 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Legend } from 'recharts';
 import Card from '../../components/Card/Card';
+import useWindowSize from '../../hooks/useWindowSize';
 
 import { CUSTOMER_USER_DATA } from '../Dashboard/constants';
 
 const CardWithChart = () => {
+  const windowSize = useWindowSize();
   return (
     <Card className='card-chart-container'>
       <div className='card-head__header'>ANALYTICS</div>
       <div className='chart-container'>
-        <BarChart width={530} height={350} data={CUSTOMER_USER_DATA}>
+        <BarChart
+          width={windowSize.width < 769 ? windowSize.width - 60 : 530}
+          height={350}
+          data={CUSTOMER_USER_DATA}
+        >
           <XAxis
             dataKey='name'
             tickMargin={20}

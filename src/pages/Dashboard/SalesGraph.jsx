@@ -7,7 +7,10 @@ import './Dashboard.scss';
 
 import { SALES_GRAPH_DATA } from './constants';
 
+import useWindowSize from '../../hooks/useWindowSize';
+
 const SalesGraph = () => {
+  const windowSize = useWindowSize();
   return (
     <Card>
       <div className='sales-content'>
@@ -20,7 +23,12 @@ const SalesGraph = () => {
         </div>
       </div>
       <div className='sales-graph'>
-        <LineChart width={560} height={280} data={SALES_GRAPH_DATA}>
+        <LineChart
+          width={windowSize.width < 769 ? windowSize.width - 50 : 560}
+          height={280}
+          data={SALES_GRAPH_DATA}
+          margin={{ left: -35, bottom: 10 }}
+        >
           <defs>
             <linearGradient id='gradient' x1='0' y1='0' x2='100%' y2='0'>
               <stop offset='0%' stopColor='red' />

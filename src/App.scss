@@ -32,6 +32,8 @@ $fontColor: #282c34;
   .App {
     .appContainer {
       @include flexLayoutWithGap(column, center, flex-start, 1.3rem);
+      height: auto;
+      overflow: scroll;
 
       .appSideBar {
         display: none;

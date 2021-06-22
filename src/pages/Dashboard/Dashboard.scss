@@ -139,3 +139,62 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .dashboard-content-wrapper {
+    .dashboard-welcome-container {
+      @include flexLayoutWithGap(column, center, flex-start, 1rem);
+      min-height: 180px;
+
+      .cardWrapper {
+        width: 90%;
+      }
+    }
+
+    .leaderboard-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 280px;
+      justify-items: center;
+
+      .cardWrapper {
+        width: 90%;
+
+        .card-footer {
+          @include flexLayout(row, center, space-between);
+          max-width: 100%;
+          width: 82%;
+          height: 30.5%;
+          padding: 0 1rem;
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .sales-container {
+      display: flex;
+      justify-content: center;
+      height: 500px;
+
+      .cardWrapper {
+        @include flexLayoutWithGap(column, center, flex-start, 1rem);
+        width: 92%;
+        height: 500px;
+        padding: 0 0.5rem;
+
+        .sales-content {
+          width: 100%;
+
+          .sales-description {
+            height: 120px;
+          }
+        }
+
+        .sales-graph {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

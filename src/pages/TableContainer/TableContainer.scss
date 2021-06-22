@@ -165,3 +165,18 @@
 
   }
 }
+
+@media (max-width: 768px) {
+  .tableContainer {
+    @include flexLayoutWithGap(column, center, flex-start, 1rem);
+    height: 700px;
+
+    .table-card {
+      width: 96%;
+    }
+
+    .select-card {
+      width: 96%;
+    }
+  }
+}
