@@ -115,6 +115,13 @@
     .navItemContainer {
       width: 50%;
 
+      .navItems {
+        justify-content: center;
+      }
+    }
+
+    .navOptionsContainer {
+      right: 10px
     }
   }
 }

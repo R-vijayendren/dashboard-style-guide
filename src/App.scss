@@ -30,6 +30,8 @@ $fontColor: #282c34;
 
 @media (max-width: 768px) {
   .App {
+    min-height: 2000px;
+
     .appContainer {
       @include flexLayoutWithGap(column, center, flex-start, 1.3rem);
       height: auto;
