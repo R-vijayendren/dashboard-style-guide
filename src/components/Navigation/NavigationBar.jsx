@@ -21,7 +21,7 @@ const NavigationBar = () => {
         <div className='pageTitle'>Dashboard</div>
         <div className='navItems'>
           {windowSize.width > 768 && (
-            <div>
+            <div className='options'>
               <div className='nav-icons'>
                 <VscBellDot size={20} />
               </div>

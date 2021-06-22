@@ -40,6 +40,11 @@
       @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
       width: 200px;
 
+      .options {
+        @include flexLayoutWithGap(row, center, flex-start, 1.5rem);
+        width: 120px;
+      }
+
       .nav-icons {
         &:hover {
           cursor: pointer;
