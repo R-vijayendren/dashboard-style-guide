@@ -2,7 +2,7 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Legend } from 'recharts';
 import Card from '../../components/Card/Card';
 
-import { CUSTOMER_USER_DATA } from './constants';
+import { CUSTOMER_USER_DATA } from '../Dashboard/constants';
 
 const CardWithChart = () => {
   return (
